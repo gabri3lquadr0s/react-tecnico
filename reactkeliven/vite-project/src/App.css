@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100vw;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 5%;
+  gap: 22%;
+  background-color: chocolate;
+}
+
+.header h1{
+  cursor: pointer;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.navBar h4 {
+  cursor: pointer;
+}
+
+.banner {
+  width: 100%;
+}
+
+.paralax {
+  background-image: url("../../public/dogue.jpg");
+  min-height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.galeria {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 50px;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.galeria img {
+  width: 300px;
+  height: 250px;
+  border-radius: 15px;
+  border: 3px solid chocolate;
+  cursor: pointer;
+  transition: transform 1.0s;
+}
+
+.galeria img:hover {
+  transform: scale(1.5);
+}
+
+.footer {
+  background-color: chocolate;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.footer h2 {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
