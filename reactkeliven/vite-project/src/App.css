@@ -15,7 +15,7 @@
   background-color: chocolate;
 }
 
-.header h1{
+.footer h2{
   cursor: pointer;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .paralax {
-  background-image: url("../../public/dogue.jpg");
+  background-image: url("./assets/dogue.jpg");
   min-height: 600px;
   background-attachment: fixed;
   background-position: center;

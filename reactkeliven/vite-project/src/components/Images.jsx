@@ -1,12 +1,12 @@
-import rottweiler1 from '../../public/rottweiler1.jpg'
-import rottweiler2 from '../../public/rottweiler2.jpg'
-import rottweiler3 from '../../public/rottweiler3.jpg'
-import pug1 from '../../public/pug1.jpg'
-import pug2 from '../../public/pug2.jpg'
-import pug3 from '../../public/pug3.jpg'
-import pastor1 from '../../public/pastor1.jpg'
-import pastor2 from '../../public/pastor2.jpg'
-import pastor3 from '../../public/pastor3.jpg'
+import rottweiler1 from '../assets/rottweiler1.jpg'
+import rottweiler2 from '../assets/rottweiler2.jpg'
+import rottweiler3 from '../assets/rottweiler3.jpg'
+import pug1 from '../assets/pug1.jpg'
+import pug2 from '../assets/pug2.jpg'
+import pug3 from '../assets/pug3.jpg'
+import pastor1 from '../assets/pastor1.jpg'
+import pastor2 from '../assets/pastor2.jpg'
+import pastor3 from '../assets/pastor3.jpg'
 
 export default function Images() {
     return(

@@ -1,17 +1,10 @@
-import { useState } from "react"
+import Title from './Title'
 
 function Header() {
-    const [clicked, setClick] = useState(false);
-    const click = () => {setClick(!clicked)};
-    
     return (
         <>
             <header className="header">
-                {!clicked ? (
-                    <h1 onClick={click}>A Simple Dog Page</h1>
-                ): (
-                    <h1 onClick={click}>For dog lovers only</h1>
-                )}
+                <Title title="A Simple Dog Page"/>
                 <nav className="navBar">
                     <h4 onClick={() => window.location.replace("/#i1")}>Rottweiler</h4>
                     <h4 onClick={() => window.location.replace("/#i2")}>Pug</h4>
