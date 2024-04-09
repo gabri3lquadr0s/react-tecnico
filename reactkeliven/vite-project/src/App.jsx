@@ -1,17 +1,9 @@
-import Header from './components/Header'
-import Banner from './components/Banner'
-import About from './components/About'
-import Images from './components/Images'
-import './App.css'
+import React from 'react';
+import Pages from './routes/index'
 
 function App() {
-  return(
-    <>
-      <Header />
-      <Banner />
-      <Images />
-      <About />
-    </>
+  return (
+    <Pages />
   )
 }
 
