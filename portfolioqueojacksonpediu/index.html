@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Homepage</title>
+</head>
+<body>
+    <header class="header">
+        <img class="icon" src="https://avatars.githubusercontent.com/u/125307891?v=4">
+        <nav class="nav">
+                <h3>Home</h3>
+                <h3>Técnico</h3>
+                <h3>Humanas</h3>
+                <h3>Natureza</h3>
+                <h3>Matemática</h3>
+                <h3>Linguagens</h3>
+        </nav>
+    </header>
+    <main style="overflow: hidden;">
+        <iframe src="./pages/home.html" title="asd" class="iframe"></iframe>
+    </main>
+    <footer class="footer">
+        <h1>asd</h1>
+    </footer>
+</body>
+<script>
+    $('h3').on('click', function() {
+        let area = $(this).text().toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        let iframe = $('.iframe').attr('src').split('/')[2].split('.')[0].toUpperCase();
+        if(area == iframe) return;
+        switch(area) {
+            case 'HOME':
+                $('.iframe').attr('src', './pages/home.html')
+                break;
+            case 'TECNICO':
+                $('.iframe').attr('src', './pages/tecnico.html')
+                break;
+            case 'MATEMATICA':
+                $('.iframe').attr('src', './pages/matematica.html')
+                break;
+            case 'NATUREZA':
+                $('.iframe').attr('src', './pages/natureza.html')
+                break;
+            case 'HUMANAS':
+                $('.iframe').attr('src', './pages/humanas.html')
+                break;
+            case 'LINGUAGENS':
+                $('.iframe').attr('src', './pages/linguagens.html')
+                break;
+        }
+    })
+</script>
+</html>
