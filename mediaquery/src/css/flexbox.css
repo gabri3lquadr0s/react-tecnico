@@ -1,0 +1,51 @@
+.center {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.center h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: space-evenly;
+    margin: 0 30px;
+    background-color: cornflowerblue;
+}
+
+.item {
+    border: 2px solid aliceblue;
+    padding: 20px;
+}
+
+.item h1 {
+    font-size: 15px;
+}
+
+.item1 {
+    background-color: blue;
+}
+
+.item2 {
+    background-color: brown;
+}
+
+.item3 {
+    background-color: coral;
+}
+
+@media screen and (max-width: 599px) {
+    .container {
+        flex-direction: column;
+        background-color: cadetblue;
+    }
+    .item {
+        width: 100vw;
+    }
+}
