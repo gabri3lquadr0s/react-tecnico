@@ -1,1 +1,60 @@
+<link rel="stylesheet" href="../css/subjects.css">
 
+<div class="paralax">
+    <h1 id="title" style="color: aliceblue;"></h1>
+</div>
+
+<div class="content">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    window.addEventListener('message', function(e) {
+        console.log(e.data);
+        getJsonData(e.data);
+    })
+
+    var stuff = {
+            "data": [
+                {
+                    "id": 1,
+                    "subject": "Técnico",
+                    "img": "",
+                    "atts": [{ "src": "", "description": "asd", "title": "React" }]
+                },
+                {
+                    "id": 2,
+                    "subject": "Matemática",
+                    "img": "",
+                    "atts": [{ "src": "", "description": "", "title": "Construção do Teodolito" }]
+                },
+                {
+                    "id": 3,
+                    "subject": "Natureza",
+                    "img": "",
+                    "atts": [{ "src": "", "description": "", "title": "Prova" }]
+                },
+                {
+                    "id": 4,
+                    "subject": "Humanas",
+                    "img": "",
+                    "atts": [{ "src": "", "description": "", "title": "Assembleia da ONU" }]
+                },
+                {
+                    "id": 5,
+                    "subject": "Linguagens",
+                    "img": "",
+                    "atts": [{ "src": "", "description": "", "title": "Plano de Texto" }]
+                }
+            ]
+        }
+
+    function getJsonData(id) {
+        let data = stuff.data[id-1];
+        $('#title').text(data.subject);
+        for(let i = 0; i < data.atts.length; i++) {
+            let element = `<div class='card'><h2>${data.atts[i].title}</h2>${data.atts[i].src}<h3>${data.atts[i].description}</h3></div>`;
+            $('.content').append(element);
+        }
+    }
+</script>

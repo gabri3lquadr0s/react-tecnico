@@ -11,24 +11,30 @@
     <header class="header">
         <img class="icon" src="https://avatars.githubusercontent.com/u/125307891?v=4">
         <nav class="nav">
-                <h3>Home</h3>
-                <h3>Técnico</h3>
-                <h3>Humanas</h3>
-                <h3>Natureza</h3>
-                <h3>Matemática</h3>
-                <h3>Linguagens</h3>
+                <h3 id="0">Home</h3>
+                <h3 id="1">Técnico</h3>
+                <h3 id="2">Matemática</h3>
+                <h3 id="3">Natureza</h3>
+                <h3 id="4">Humanas</h3>
+                <h3 id="5">Linguagens</h3>
         </nav>
     </header>
     <main style="overflow: hidden;">
-        <iframe src="./pages/home.html" title="asd" class="iframe"></iframe>
+        <iframe src="./pages/home.html" title="asd" class="iframe" id="iframe"></iframe>
     </main>
 </body>
 <script>
     $('h3').on('click', function() {
         let area = $(this).text().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         let iframe = $('.iframe').attr('src').split('/')[2].split('.')[0].toLowerCase();
-        if(area == iframe) return;
-        $('.iframe').attr('src', `./pages/${area}.html`);
+        // if(area == iframe) return;
+        let id = parseInt($(this).attr('id'));
+        if(id == 0) {
+            $('.iframe').attr('src', `./pages/home.html`);
+        } else {
+            $('.iframe').attr('src', `./pages/tecnico.html`);
+            document.getElementById('iframe').onload = () => {document.getElementById('iframe').contentWindow.postMessage(id, '*');}
+        }
     })
 </script>
 </html>
