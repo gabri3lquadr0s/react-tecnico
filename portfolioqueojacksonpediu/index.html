@@ -22,35 +22,13 @@
     <main style="overflow: hidden;">
         <iframe src="./pages/home.html" title="asd" class="iframe"></iframe>
     </main>
-    <footer class="footer">
-        <h1>asd</h1>
-    </footer>
 </body>
 <script>
     $('h3').on('click', function() {
-        let area = $(this).text().toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-        let iframe = $('.iframe').attr('src').split('/')[2].split('.')[0].toUpperCase();
+        let area = $(this).text().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        let iframe = $('.iframe').attr('src').split('/')[2].split('.')[0].toLowerCase();
         if(area == iframe) return;
-        switch(area) {
-            case 'HOME':
-                $('.iframe').attr('src', './pages/home.html')
-                break;
-            case 'TECNICO':
-                $('.iframe').attr('src', './pages/tecnico.html')
-                break;
-            case 'MATEMATICA':
-                $('.iframe').attr('src', './pages/matematica.html')
-                break;
-            case 'NATUREZA':
-                $('.iframe').attr('src', './pages/natureza.html')
-                break;
-            case 'HUMANAS':
-                $('.iframe').attr('src', './pages/humanas.html')
-                break;
-            case 'LINGUAGENS':
-                $('.iframe').attr('src', './pages/linguagens.html')
-                break;
-        }
+        $('.iframe').attr('src', `./pages/${area}.html`);
     })
 </script>
 </html>
