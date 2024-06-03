@@ -9,6 +9,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h2 {
+    font-size: small;
+}
+
 .card-title {
     max-height: min-content;
     width: 300px;
