@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Card from '../components/Card'
 import '../css/search.css'
 
+
 export default function Home() {
     const [id, setId] = useState();
     const [pokemon, setPokemon] = useState(null)
@@ -30,21 +31,23 @@ export default function Home() {
 
     return (
         <>
-            <input type='number' value={id} onChange={handleSubmit} className='search-input'></input>
-            {
-                pokemon && (
-                     <Card 
-                        name={pokemon.name}
-                        sprite = {pokemon.sprites.front_default}
-                        hp={pokemon.stats[0].base_stat} 
-                        atk={pokemon.stats[1].base_stat} 
-                        def={pokemon.stats[2].base_stat} 
-                        satk={pokemon.stats[3].base_stat} 
-                        sdef={pokemon.stats[4].base_stat} 
-                        spd={pokemon.stats[5].base_stat} 
-                     />
-                )
-            }
+            <div style={{display: 'flex', flexDirection: 'column'}}>
+                <input type='number' value={id} onChange={handleSubmit} className='search-input' min={1}></input>
+                {
+                    pokemon && (
+                        <Card 
+                            name={pokemon.name}
+                            sprite = {pokemon.sprites.front_default}
+                            hp={pokemon.stats[0].base_stat} 
+                            atk={pokemon.stats[1].base_stat} 
+                            def={pokemon.stats[2].base_stat} 
+                            satk={pokemon.stats[3].base_stat} 
+                            sdef={pokemon.stats[4].base_stat} 
+                            spd={pokemon.stats[5].base_stat} 
+                        />
+                    )
+                }
+            </div>
         </>
     )
 }
